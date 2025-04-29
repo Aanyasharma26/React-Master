@@ -1,0 +1,217 @@
+/* Enhanced CSS for NoteKeep App */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color:rgb(236, 248, 252);
+  color: #4077cf;
+  line-height: 1.6;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.header {
+  background-color:rgb(236, 248, 252);
+  color: #070c12;
+  padding: 1rem;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.header p {
+ 
+    margin: 0.5rem 0 0;
+    font-size: 1rem;
+    color: #94a3b8;
+    border-bottom: 1px solid #1b1b1d; 
+    padding-bottom: 0.5rem; 
+  }
+
+
+.navigation {
+  margin: 1.5rem auto;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.navigation button {
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  background-color: #13254c;;
+  color: #f8fafc;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.navigation button.active {
+  background-color:#1a519f;
+  box-shadow: 0 4px 6px -1px rgba(37, 99, 235, 0.3);
+}
+
+.navigation button:hover:not(.active) {
+  background-color: #5375a5;
+}
+
+.content {
+  flex: 1;
+  padding: 1rem;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+.note-form {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #13181f;
+}
+
+.note-form input,
+.note-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.note-form input:focus,
+.note-form textarea:focus {
+  outline: none;
+  border-color: #24355a;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.note-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.save-button {
+  background-color: #3b578e;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.save-button:hover {
+  background-color:#1c3364;
+}
+
+
+.note-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; 
+  max-width: 800px;
+  margin: 0 auto; 
+  padding: 1rem;
+}
+
+.note-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 1.25rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* 3D shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+.note-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow on hover */
+}
+
+
+.note-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.25rem;
+  color: #1e293b;
+}
+
+
+.note-card p {
+  margin: 0;
+  font-size: 1rem;
+  color: #475569;
+}
+
+.delete-btn {
+  background-color: #7a2727;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  transition: background-color 0.2s ease;
+}
+
+.delete-btn:hover {
+  background-color: #b91c1c; 
+}
+
+.delete-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.5); 
+}
+.delete-btn:active {
+  transform: scale(0.98); 
+}
+.delete-btn:disabled {
+  background-color: #e2e8f0; 
+  color: #9ca3af; 
+  cursor: not-allow
+}
+.delete-btn:disabled:hover {
+  background-color: #e2e8f0; 
+}
+.delete-btn:disabled:active {
+  transform: none;
+}
+.delete-btn:disabled:focus {
+  box-shadow: none; 
+}
+.note-card .note-content {
+  margin-top: 1rem;
+  font-size: 1rem;
+  color: #475569;
+}
+.note-card .note-content p {
+  margin: 0;
+}
+.note-card .note-content ul {
+  margin: 0;
+  padding-left: 1.5rem;
+} 
